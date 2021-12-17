@@ -14,6 +14,7 @@ options = {
 tfnet = TFNet(options)
 frame = cv2.imread("0.jpg")
 results = tfnet.return_predict(frame)
+colors = [tuple(255 * np.random.rand(3)) for _ in range(10)]
 
 for color, result in zip(colors, results):
     tl = (result['topleft']['x'], result['topleft']['y'])
