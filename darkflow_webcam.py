@@ -4,10 +4,11 @@ import numpy as np
 import time
 
 options = {
-    'model': 'cfg/tiny-yolo-3c.cfg',
-    'load': 1275,
-    'threshold': 0.5,
-    # 'gpu': 0
+            'metaLoad': 'built_graph/tiny-yolo-3c.meta',
+            'pbLoad': 'built_graph/tiny-yolo-3c.pb', 
+            'labels': 'labels.txt',
+            'threshold': 0.2,
+#             'gpu': 0.7
 }
 
 tfnet = TFNet(options)
